@@ -1,3 +1,3 @@
 # ios-password-app
 Free iOS password keeper. No pods. All free.
-By using the code you need to give credit.
+You may use this code for commerical uses. Give credits to @JGaw7 from GitHub
