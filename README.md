@@ -16,4 +16,4 @@ installation = true
 Please make sure to update tests as appropriate. 👌
 
 ## License
-✔️[MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
+✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
