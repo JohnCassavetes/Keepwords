@@ -1,5 +1,5 @@
 # It's called "Keepwords"
-🔐 Keepwords is a simple navtive iOS password app. 
+🔐 Keepwords is a simple native iOS password app. 
 - ❌☁️ No iCloud. 
 - 👨‍💻100% local.
 
