@@ -19,7 +19,7 @@ installation = true
 Please make sure to update tests as appropriate. 👌
 
 ## Support
-Your **star**🎖⭐️ means so much to us. Giving us a **star** helps us to make more epic projects that you'll enjoy!
+⭐️ Your **star** means so much to us. Giving us a **star** helps us to make more epic projects that you'll enjoy!
 
 ## License
 ✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
