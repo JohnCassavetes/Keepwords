@@ -7,10 +7,9 @@
 - 👨‍💻100% local.
 
 ## Installation
-No pods installation. The only thing that makes an app project too complicated is them adding **pods**. Not easy to open. In Keepwords, we don't use pods because we value the best user experience for our users, which is simplicity and easy access. It's really that simple.
+No pods installation. The only thing that makes an app project too complicated is them adding **pods**. Not easy to open. In Keepwords, we don't use pods because we value the best user experience for you. 
 ```bash
-installation = No pods from us!
-installation = true
+no pods intallation = true
 ```
 
 ## Contributing
