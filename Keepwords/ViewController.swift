@@ -8,17 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UIAdaptivePresentationControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UIAdaptivePresentationControllerDelegate, UISearchBarDelegate {
     
     var myInfo = [String: [String:String]]()
     
     let userDefaults = UserDefaults.standard
     
+    var searchResult = UISearchController()
+    
+    var filteredTitle = [String]()
+    
     @IBAction func addButtom(_ sender: UIBarButtonItem) {
     }
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].titleName.count
+        if self.searchResult.isActive {
+            return sections[section].filteredTitle.count
+        } else {
+            return sections[section].titleName.count
+        }
     }
     
     private func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> Int {
@@ -37,6 +45,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return sections.map{$0.letter}
         
     }
+    
+    
+    var searchActive = true
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        filteredTitle = mainTitle.filter({ (text) -> Bool in
+            let tmp:NSString = text as NSString
+            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            return range.location != NSNotFound
+        })
+        
+        filteredTitle = searchText.isEmpty ? mainTitle : mainTitle.filter { $0.contains(searchText) }
+
+        if (filteredTitle.count == 0){
+            searchActive = false
+        }
+        else{
+            searchActive = true
+        }
+        
+        self.tableView.reloadData()
+         
+    }
+
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell
@@ -44,13 +93,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let bold: UIFont = UIFont.boldSystemFont(ofSize: 16)
         cell.textLabel!.font = bold
         let section = sections[indexPath.section]
-        let mainTitle = section.titleName[indexPath.row]
-        cell.textLabel?.text = mainTitle
+        
+        
+        if self.searchResult.isActive {
+            let mainTitle = section.filteredTitle[indexPath.row]
+            cell.textLabel?.text = mainTitle
+        } else {
+            let filteredTitle = section.filteredTitle[indexPath.row]
+            cell.textLabel?.text = filteredTitle
+        }
+        
         return cell
     }
     
     func updateSearchResults(for searchController: UISearchController) {
+        
+        filteredTitle = mainTitle
+        
+        let group = Dictionary(grouping: mainTitle, by: {String($0.prefix(1)).uppercased()})
+        print("Group: \(group)")
+        let group2 = Dictionary(grouping: filteredTitle, by: {String($0.prefix(1)).uppercased()})
+        print("Group: \(group)")
+        let keys = group.keys.sorted()
+        sections = keys.map{Section(letter: $0, titleName: group[$0]!.sorted(), filteredTitle: group2[$0]!.sorted())}
+        
+        
+        self.filteredTitle.removeAll(keepingCapacity: false)
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        let array = (self.mainTitle as NSArray).filtered(using: searchPredicate)
+        self.filteredTitle = array as! [String]
+        print(filteredTitle)
         self.tableView.reloadData()
+        
     }
     
     
@@ -85,11 +159,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var searchResult = UISearchController()
-    
     struct Section {
         let letter : String
         let titleName : [String]
+        let filteredTitle : [String]
     }
     
     var sections = [Section]()
@@ -106,11 +179,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 mainTitle.append(i)
             }
             
+            filteredTitle = mainTitle
             let group = Dictionary(grouping: mainTitle, by: {String($0.prefix(1)).uppercased()})
             print("Group: \(group)")
+            let group2 = Dictionary(grouping: filteredTitle, by: {String($0.prefix(1)).uppercased()})
+            print("Group: \(group)")
             let keys = group.keys.sorted()
-            sections = keys.map{Section(letter: $0, titleName: group[$0]!.sorted())}
-            
+            sections = keys.map{Section(letter: $0, titleName: group[$0]!.sorted(), filteredTitle: group2[$0]!.sorted())}
+        
             print("Sections: \(sections)")
             
             } else {
@@ -131,6 +207,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         navigationItem.title = "Passwords"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        //SearchBar
+        self.searchResult = UISearchController(searchResultsController: nil)
+        self.searchResult.searchResultsUpdater = self
+        self.searchResult.searchBar.sizeToFit()
+        self.searchResult.searchBar.placeholder = "Search"
+        self.tableView.tableHeaderView = self.searchResult.searchBar
+        self.searchResult.searchBar.backgroundColor = .none
+        self.tableView.reloadData()
         
     }
 }
