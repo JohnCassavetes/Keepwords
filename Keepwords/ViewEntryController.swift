@@ -75,11 +75,11 @@ class ViewEntryController: UIViewController {
         print("kunci: \(myInfo.keys)")  
         
         titleLabel.text = keyMainTitle
-        emailLabel.text = myInfo[keyMainTitle]!["email"]
-        userLabel.text = myInfo[keyMainTitle]!["user"]
-        passwordLabel.text = myInfo[keyMainTitle]!["pass"]
-        urlLabel.text = myInfo[keyMainTitle]!["url"]
-        notesTextView.text = myInfo[keyMainTitle]!["note"]
+        emailLabel.text = myInfo[keyMainTitle]?["email"]
+        userLabel.text = myInfo[keyMainTitle]?["user"]
+        passwordLabel.text = myInfo[keyMainTitle]?["pass"]
+        urlLabel.text = myInfo[keyMainTitle]?["url"]
+        notesTextView.text = myInfo[keyMainTitle]?["note"]
         
     }
 }

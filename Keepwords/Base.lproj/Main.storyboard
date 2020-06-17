@@ -17,9 +17,14 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FB9-eS-09t">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="yK9-Hs-KCd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="NfB-MV-OP6" customClass="FrontTableViewCell" customModule="Keepwords" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="99.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfB-MV-OP6" id="xPX-Ok-sH4">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -55,6 +60,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="yK9-Hs-KCd" id="Zo2-8c-AiO"/>
                         <outlet property="tableView" destination="FB9-eS-09t" id="mkR-3i-Rq0"/>
                     </connections>
                 </viewController>
@@ -348,7 +354,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzj-9Q-rhb">
-                                <rect key="frame" x="151" y="791" width="115" height="30"/>
+                                <rect key="frame" x="148.5" y="791" width="115" height="30"/>
                                 <state key="normal" title="Delete Password">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -446,11 +452,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="njC-se-VAg" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="22" id="2mI-pj-Fou"/>
-                            <constraint firstItem="xzj-9Q-rhb" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="151" id="3y0-FN-FyE"/>
                             <constraint firstItem="SpW-0o-3Ab" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="22" id="6HZ-Qg-kMa"/>
+                            <constraint firstItem="xzj-9Q-rhb" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="148.5" id="6Ke-5L-Aob"/>
                             <constraint firstItem="njC-se-VAg" firstAttribute="top" secondItem="X7A-WL-3bi" secondAttribute="bottom" constant="37.5" id="AKE-Pq-rZw"/>
                             <constraint firstItem="TuZ-tw-592" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="21" id="AkS-bN-IGJ"/>
-                            <constraint firstItem="sAw-qf-YVC" firstAttribute="trailing" secondItem="xzj-9Q-rhb" secondAttribute="trailing" constant="148" id="DaJ-yw-LjL"/>
                             <constraint firstItem="MU6-q2-Bp6" firstAttribute="leading" secondItem="E6U-wa-nHU" secondAttribute="trailing" constant="12" id="Fgu-Pf-cdt"/>
                             <constraint firstItem="MU6-q2-Bp6" firstAttribute="top" secondItem="Vw5-ea-m5q" secondAttribute="bottom" constant="8" id="GDj-Vk-z6G"/>
                             <constraint firstItem="nfw-CM-Lpm" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="21" id="J1V-iv-5ff"/>
@@ -472,6 +477,7 @@
                             <constraint firstItem="DvT-gx-e7c" firstAttribute="leading" secondItem="X7A-WL-3bi" secondAttribute="trailing" constant="12" id="o9d-tr-yXN"/>
                             <constraint firstItem="sAw-qf-YVC" firstAttribute="trailing" secondItem="MU6-q2-Bp6" secondAttribute="trailing" constant="18" id="phB-qo-nKe"/>
                             <constraint firstItem="RRY-2Z-Gch" firstAttribute="leading" secondItem="njC-se-VAg" secondAttribute="trailing" constant="12" id="pue-Ig-C2h"/>
+                            <constraint firstItem="sAw-qf-YVC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xzj-9Q-rhb" secondAttribute="trailing" id="pxa-wv-ULI"/>
                             <constraint firstItem="sAw-qf-YVC" firstAttribute="trailing" secondItem="DvT-gx-e7c" secondAttribute="trailing" constant="19" id="r0V-9h-4Yw"/>
                             <constraint firstItem="sAw-qf-YVC" firstAttribute="trailing" secondItem="TuZ-tw-592" secondAttribute="trailing" constant="19" id="r88-pA-8YW"/>
                             <constraint firstItem="v6e-CM-43d" firstAttribute="leading" secondItem="sAw-qf-YVC" secondAttribute="leading" constant="22" id="tS0-h7-7vh"/>
@@ -500,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmP-sD-tTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5564" y="70"/>
+            <point key="canvasLocation" x="5563.768115942029" y="69.642857142857139"/>
         </scene>
         <!--Front View Controller-->
         <scene sceneID="oum-xo-oeL">
