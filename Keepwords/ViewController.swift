@@ -93,6 +93,9 @@ class ViewController: UIViewController, UITableViewDelegate, UIAdaptivePresentat
     var mainTitle = [String]()
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchBar.showsCancelButton = true
+        
         filteredTitle = []
         dataDict = [String: [String]]()
         dataSectTitles = [String]()
@@ -106,6 +109,8 @@ class ViewController: UIViewController, UITableViewDelegate, UIAdaptivePresentat
         }
         makeSections()
         self.tableView.reloadData()
+
+        
     }
     
     func makeSections() {
@@ -142,6 +147,16 @@ class ViewController: UIViewController, UITableViewDelegate, UIAdaptivePresentat
             self.tableView.reloadData()
         }
         
+    }
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.showsCancelButton = false
+        // Remove focus from the search bar.
+        searchBar.endEditing(true)
+        // Perform any necessary work. E.g., repopulating a table view
+        // if the search bar performs filtering.
     }
     
     override func viewDidLoad() {
