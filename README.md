@@ -21,7 +21,7 @@ no pods intallation = true
 
 Please make sure to update tests as appropriate. 👌
 
-1. Fork it (<https://github.com/jeremygautama/IOS-Ai/fork>)
+1. Fork it (<https://github.com/jeremygautama/IOS-PasswordManager/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
