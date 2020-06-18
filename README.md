@@ -1,6 +1,8 @@
 # It's called "Keepwords"
 >🔐 Keepwords is a simple native iOS password app.
 
+[![Build Status](https://img.shields.io/travis/npm/cli/latest.svg)](https://travis-ci.org/npm/cli)
+
 ![](Images/keepwordsPoster.jpg)
  
 ## Features
