@@ -1,6 +1,8 @@
-![](Images/keepwordsPoster.jpg)
 # It's called "Keepwords"
-🔐 Keepwords is a simple native iOS password app. 
+>🔐 Keepwords is a simple native iOS password app.
+
+![](Images/keepwordsPoster.jpg)
+ 
 - ❌☁️ No iCloud. 
 
 - ❌🌱 No Pods
@@ -18,6 +20,12 @@ no pods intallation = true
 
 Please make sure to update tests as appropriate. 👌
 
+1. Fork it (<https://github.com/jeremygautama/IOS-Ai/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
 ## Support
 ⭐️ Your **star** means so much to us. Giving us a **star** helps us to make more epic projects that you'll enjoy!
 
@@ -25,3 +33,5 @@ Please make sure to update tests as appropriate. 👌
 
 ## License
 ✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
+
+👤 For more information feel free to contact me through my email - jgautama7@gmail.com
