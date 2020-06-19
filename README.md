@@ -37,4 +37,5 @@ Please make sure to update tests as appropriate. 👌
 ## License
 ✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
 
-👤 For more information feel free to contact me through my email - jgautama7@gmail.com
+## Contact
+👤 If you have any questions, feel free to contact me through my email - jgautama7@gmail.com
