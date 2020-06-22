@@ -3,7 +3,7 @@
 
 [![Swift Version](https://img.shields.io/badge/Swift-5-orange.svg)]()
 [![Build Status](https://img.shields.io/travis/npm/cli/latest.svg)](https://travis-ci.org/npm/cli)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
 
 ![](Images/keepwordsPoster.jpg)
  
