@@ -1,6 +1,10 @@
 # It's called "Keepwords"
 >🔐 Keepwords is a simple native iOS password app.
 
+[![Swift Version](https://img.shields.io/badge/Swift-5-orange.svg)]()
+[![Build Status](https://img.shields.io/travis/npm/cli/latest.svg)](https://travis-ci.org/npm/cli)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
+
 ![](Images/keepwordsPoster.jpg)
  
 ## Features
@@ -33,6 +37,10 @@ Please make sure to update tests as appropriate. 👌
 📢 Help spread the word!!!
 
 ## License
-✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
+📄✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
 
-👤 For more information feel free to contact me through my email - jgautama7@gmail.com
+## Author
+👤 Jeremy Gautama
+
+## Contact
+✉️ If you have any questions, feel free to contact me through my email - jgautama7@gmail.com
