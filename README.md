@@ -40,7 +40,7 @@ Please make sure to update tests as appropriate. 👌
 📄✔️ The best license. [MIT](https://github.com/jeremygautama/ios-password-app/blob/master/LICENSE.md) License.
 
 ## Author
-👤 Jeremy Gautama 
+👤 Jeremy Gautama
 
 ## Contact
 ✉️ If you have any questions, feel free to contact me through my email - jgautama7@gmail.com
