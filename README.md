@@ -2,7 +2,7 @@
 >🔐 Keepwords is a simple native iOS password app.
  
 [![Swift Version](https://img.shields.io/badge/Swift-5-orange.svg)]()
-[![Build Status](https://img.shields.io/travis/npm/cli/latest.svg)]()
+[![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)]()
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
 
 ![](Images/keepwordsPoster.jpg)
