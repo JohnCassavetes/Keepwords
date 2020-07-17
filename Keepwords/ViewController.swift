@@ -178,8 +178,12 @@ class ViewController: UIViewController, UITableViewDelegate, UIAdaptivePresentat
             print("\(k) = \(v)")
         }
         */
-        navigationItem.title = "Passwords"
+        
+        navigationItem.title = "Keepwords"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.init(red: 247/255, green: 186/255, blue: 43/255, alpha: 1)]
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 247/255, green: 186/255, blue: 43/255, alpha: 1)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         self.tableView.reloadData()
         
