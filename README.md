@@ -8,10 +8,8 @@
 ![](Images/keepwordsPoster.jpg)
  
 ## Features
-- ❌☁️ No iCloud. 
-
+- ❌☁️ No iCloud.
 - ❌🌱 No Pods
-
 - 👨‍💻100% local.
 
 ## Installation
