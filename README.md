@@ -30,7 +30,7 @@ Please make sure to update tests as appropriate. 👌
 5. Create a new Pull Request
 
 ## Support
-⭐️ Your **star** means so much to us. Giving us a **star** helps us to make more epic projects that you'll enjoy!
+⭐️ Your **star** means so much. Giving a **star** helps motivate me to make more epic projects that you'll enjoy!
 
 📢 Help spread the word!!!
 
