@@ -38,7 +38,7 @@ Please make sure to update tests as appropriate. 👌
 📄✔️ The best license. [MIT](https://github.com/jeremygautama/Keepwords/blob/master/LICENSE.md) License.
 
 ## Author
-👤 Jeremy Gautama
+👤 Jeremy Gautama 
 
 ## Contact
 🥨 If you have any questions, feel free to [email](mailto:mail.jeremygautama@gmail.com) me or to visit my [website](https://jeremygautama.github.io). Thanks!
